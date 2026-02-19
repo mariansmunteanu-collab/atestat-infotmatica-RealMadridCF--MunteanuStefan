@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atestat Real Madrid - Munteanu Stefan</title>
+    <style>
+        :root {
+            --alb: #FFFFFF;
+            --auriu: #C19A6B; 
+            --auriu-hover: #AF8A5A;
+            --gri-inchis: #1A1A1A;
+            --albastru-madrid: #00529F;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--alb);
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Fundal cu embleme pe fiecare sectiune */
+        section {
+            padding: 100px 15%;
+            border-bottom: 2px solid #f0f0f0;
+            position: relative;
+            background-image: url('https://upload.wikimedia.org');
+            background-repeat: no-repeat;
+            background-position: 98% 20px;
+            background-size: 120px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #fff 0%, #f4f4f4 100%);
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 6px solid var(--auriu);
+        }
+
+        header img { width: 140px; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); }
+
+        nav {
+            background: var(--gri-inchis);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: var(--auriu);
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.4s;
+        }
+
+        nav a:hover { color: var(--alb); border-bottom: 2px solid var(--auriu); }
+
+        h2 { color: var(--auriu); font-size: 2.5em; border-left: 8px solid var(--auriu); padding-left: 20px; margin-bottom: 30px; }
+
+        .text-dezvoltat { text-align: justify; font-size: 1.1em; color: #444; }
+
+        /* Grid Jucatori */
+        .grid-lot {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .jucator {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .jucator:hover { border-color: var(--auriu); transform: scale(1.05); }
+        .jucator img { width: 100%; border-radius: 5px; filter: grayscale(20%); }
+        .jucator h4 { margin: 10px 0 0; font-size: 1.1em; }
+
+        /* Tabel Marcatori */
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; background: white; }
+        th { background: var(--auriu); color: white; padding: 15px; text-align: left; }
+        td { padding: 12px; border: 1px solid #eee; }
+        tr:hover { background-color: #fff9ed; }
+
+        /* UCL Interactive */
+        .ucl-container { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .ucl-btn {
+            background: var(--alb);
+            border: 2px solid var(--auriu);
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .ucl-btn:hover { background: var(--auriu); color: white; }
+
+        .ucl-box {
+            margin-top: 30px;
+            padding: 30px;
+            background: #fdfdfd;
+            border: 3px double var(--auriu);
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+
+        .stadion-img { width: 100%; height: auto; border: 10px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin: 20px 0; }
+
+        .clasico-img { width: 100%; max-width: 800px; display: block; margin: 20px auto; border-radius: 10px; }
+
+        footer {
+            background: var(--gri-inchis);
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            border-top: 10px solid var(--auriu);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://upload.wikimedia.org" alt="Logo Real Madrid">
+    <h1>REAL MADRID CLUB DE FÚTBOL</h1>
+    <p><i>"Mito y Leyenda del Deporte Mundial"</i></p>
+</header>
+
+<nav>
+    <a href="#istorie">Istoria</a>
+    <a href="#shop">Shop Oficial</a>
+    <a href="#lot">Lotul 2025/26</a>
+    <a href="#marcatori">Golgheteri</a>
+    <a href="#ucl">Trofee UCL</a>
+    <a href="#stadion">Bernabéu</a>
+    <a href="#clasico">El Clásico</a>
+</nav>
+
+<section id="istorie">
+    <h2>Istoria Detaliată a Clubului</h2>
+    <div class="text-dezvoltat">
+        <p>Real Madrid C.F. nu este doar un club de fotbal, ci o instituție globală fondată oficial la <b>6 martie 1902</b>. Încă de la începuturi, clubul a impus standarde ridicate, dar adevărata revoluție a început în 1943, când <b>Santiago Bernabéu</b> a devenit președinte. El a vizionat un club care să aibă cel mai mare stadion și cei mai buni jucători din lume.</p>
+        <p>În anii '50, Real Madrid a uimit planeta câștigând primele cinci ediții ale Cupei Campionilor Europeni, sub conducerea legendarului <b>Alfredo Di Stéfano</b>. Această perioadă a cimentat supranumele de "Los Blancos". De-a lungul deceniilor, clubul a trecut prin epoca "Yé-yé" (formată doar din jucători spanioli), "Quinta del Buitre" în anii '80 și faimoasa eră "Galactică" începută de Florentino Pérez în 2000, aducându-i pe Figo, Zidane, Ronaldo și Beckham.</p>
+        <p>Astăzi, Real Madrid deține titlul de <b>Cel mai bun club al secolului XX</b> (decernat de FIFA) și continuă să domine fotbalul modern, fiind singura echipă care a reușit să își apere trofeul Champions League în formatul nou de trei ori consecutiv (2016-2018).</p>
+    </div>
+</section>
+
+<section id="shop">
+    <h2>Shop - Echipament și Accesorii</h2>
+    <div class="text-dezvoltat">
+        <p>Magazinul oficial oferă fanilor posibilitatea de a purta culorile celei mai titrate echipe din lume. Pentru sezonul 2025/2026, designul îmbină albul impecabil cu inserții aurii, simbolizând regalitatea și succesul infinit al clubului.</p>
+    </div>
+    <div class="grid-lot">
+        <div class="jucator"><img src="https://assets.adidas.com" alt="Home"><h4>Tricou Acasă</h4><p>100 EUR</p></div>
+        <div class="jucator"><img src="https://assets.adidas.com" alt="Away"><h4>Tricou Deplasare</h4><p>100 EUR</p></div>
+        <div class="jucator"><img src="https://assets.adidas.com" alt="Ball"><h4>Minge Oficială</h4><p>40 EUR</p></div>
+    </div>
+</section>
+
+<section id="lot">
+    <h2>Lotul de Jucători 2025/2026</h2>
+    <p class="text-dezvoltat">Sub comanda staff-ului tehnic, lotul actual este un mix perfect între experiența veteranilor și explozia tinerelor talente.</p>
+    <div class="grid-lot">
+        <!-- Portari -->
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Courtois"><h4>Thibaut Courtois</h4><p>Portar</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Lunin"><h4>Andriy Lunin</h4><p>Portar</p></div>
+        <!-- Fundasi -->
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Carvajal"><h4>Dani Carvajal</h4><p>Fundaș Dreapta</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Militao"><h4>Eder Militão</h4><p>Fundaș Central</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Rudiger"><h4>Antonio Rüdiger</h4><p>Fundaș Central</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Mendy"><h4>Ferland Mendy</h4><p>Fundaș Stânga</p></div>
+        <!-- Mijlocasi -->
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Bellingham"><h4>Jude Bellingham</h4><p>Mijlocaș</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Valverde"><h4>Fede Valverde</h4><p>Mijlocaș</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Camavinga"><h4>E. Camavinga</h4><p>Mijlocaș</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Modric"><h4>Luka Modrić</h4><p>Mijlocaș</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Guler"><h4>Arda Güler</h4><p>Mijlocaș</p></div>
+        <!-- Atacanti -->
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Mbappe"><h4>Kylian Mbappé</h4><p>Atacant</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Vini"><h4>Vinícius Jr.</h4><p>Atacant</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Rodrygo"><h4>Rodrygo</h4><p>Atacant</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Endrick"><h4>Endrick</h4><p>Atacant</p></div>
+        <div class="jucator"><img src="https://publish-p33712-e119997.adobeaemcloud.com" alt="Brahim"><h4>Brahim Díaz</h4><p>Atacant</p></div>
+        <p>... și alți tineri din academie completând lotul de 25.</p>
+    </div>
+</section>
+
+<section id="marcatori">
+    <h2>Top 10 Golgheteri Istorici</h2>
+    <div class="text-dezvoltat">
+        <p>Acești jucători au scris istorie prin eficacitatea lor în fața porții, purtând legendarul tricou alb.</p>
+    </div>
+    <table>
+        <thead>
+            <tr><th>Loc</th><th>Jucător</th><th>Perioadă</th><th>Goluri Oficiale</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Cristiano Ronaldo</td><td>2009-2018</td><td>451</td></tr>
+            <tr><td>2</td><td>Karim Benzema</td><td>2009-2023</td><td>354</td></tr>
+            <tr><td>3</td><td>Raúl González</td><td>1994-2010</td><td>323</td></tr>
+            <tr><td>4</td><td>Alfredo Di Stéfano</td><td>1953-1964</td><td>308</td></tr>
+            <tr><td>5</td><td>Carlos Santillana</td><td>1971-1988</td><td>290</td></tr>
+            <tr><td>6</td><td>Ferenc Puskás</td><td>1958-1966</td><td>242</td></tr>
+            <tr><td>7</td><td>Hugo Sánchez</td><td>1985-1992</td><td>208</td></tr>
+            <tr><td>8</td><td>Francisco Gento</td><td>1953-1971</td><td>182</td></tr>
+            <tr><td>9</td><td>Pirri</td><td>1964-1980</td><td>172</td></tr>
+            <tr><td>10</td><td>Emilio Butragueño</td><td>1983-1995</td><td>171</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="ucl">
+    <h2>Cele 15 Trofee UEFA Champions League</h2>
+    <p>Real Madrid deține recordul absolut al competiției. Apasă pe fiecare an pentru a vedea detaliile finalei:</p>
+    
+    <div class="ucl-container">
+        <!-- Generat butoane pentru toti anii -->
+        <button class="ucl-btn" onclick="openUCL(1956, '4-3 vs Reims', 'Di Stefano, Rial, Marquitos', 'Parc des Princes (Paris)')">1956</button>
+        <button class="ucl-btn" onclick="openUCL(1957, '2-0 vs Fiorentina', 'Di Stefano, Gento', 'Santiago Bernabéu (Madrid)')">1957</button>
+        <button class="ucl-btn" onclick="openUCL(1958, '3-2 vs AC Milan', 'Di Stefano, Rial, Gento', 'Heysel (Bruxelles)')">1958</button>
+        <button class="ucl-btn" onclick="openUCL(1959, '2-0 vs Reims', 'Mateos, Di Stefano', 'Neckarstadion (Stuttgart)')">1959</button>
+        <button class="ucl-btn" onclick="openUCL(1960, '7-3 vs Frankfurt', 'Puskas (4), Di Stefano (3)', 'Hampden Park (Glasgow)')">1960</button>
+        <button class="ucl-btn" onclick="openUCL(1966, '2-1 vs Partizan', 'Amancio, Serena', 'Heysel (Bruxelles)')">1966</button>
+        <button class="ucl-btn" onclick="openUCL(1998, '1-0 vs Juventus', 'Mijatović', 'Amsterdam Arena')">1998</button>
+        <button class="ucl-btn" onclick="openUCL(2000, '3-0 vs Valencia', 'Morientes, McManaman, Raul', 'Stade de France')">2000</button>
+        <button class="ucl-btn" onclick="openUCL(2002, '2-1 vs Leverkusen', 'Raul, Zidane', 'Hampden Park (Glasgow)')">2002</button>
+        <button class="ucl-btn" onclick="openUCL(2014, '4-1 vs Atletico', 'Ramos, Bale, Marcelo, Ronaldo', 'Estádio da Luz (Lisabona)')">2014</button>
+        <button class="ucl-btn" onclick="openUCL(2016, '1-1 (5-3 pen) vs Atletico', 'Sergio Ramos', 'San Siro (Milano)')">2016</button>
+        <button class="ucl-btn" onclick="openUCL(2017, '4-1 vs Juventus', 'Ronaldo (2), Casemiro, Asensio', 'Millennium Stadium (Cardiff)')">2017</button>
+        <button class="ucl-btn" onclick="openUCL(2018, '3-1 vs Liverpool', 'Benzema, Bale (2)', 'Olímpico (Kiev)')">2018</button>
+        <button class="ucl-btn" onclick="openUCL(2022, '1-0 vs Liverpool', 'Vinícius Júnior', 'Stade de France (Paris)')">2022</button>
+        <button class="ucl-btn" onclick="openUCL(2024, '2-0 vs Dortmund', 'Carvajal, Vinícius Júnior', 'Wembley (Londra)')">2024</button>
+    </div>
+
+    <div id="ucl-info" class="ucl-box">
+        <h3 id="ucl-titlu" style="color: var(--auriu);"></h3>
+        <p><b>Scor Final:</b> <span id="ucl-scor"></span></p>
+        <p><b>Marcatori Real Madrid:</b> <span id="ucl-marcatori"></span></p>
+        <p><b>Stadionul Finalei:</b> <span id="ucl-stadion"></span></p>
+    </div>
+</section>
+
+<section id="stadion">
+    <h2>Stadionul Santiago Bernabéu</h2>
+    <div class="text-dezvoltat">
+        <p>Inaugurat în 1947, Santiago Bernabéu este templul fotbalului mondial. Recent, stadionul a trecut printr-un proces masiv de renovare, devenind o arenă multi-funcțională de ultimă generație. Printre inovații se numără <b>gazonul retractabil</b> (care poate fi depozitat într-o "peșteră" tehnologizată pentru a proteja iarba în timpul concertelor) și <b>acoperișul complet retractabil</b>.</p>
+        <img src="https://static.dezeen.com" alt="Bernabeu Modern" class="stadion-img">
+        <p>Cu o capacitate de peste 80.000 de locuri, stadionul găzduiește și Muzeul Real Madrid, cel mai vizitat muzeu de sport din lume, unde sunt expuse cele 15 trofee originale Champions League.</p>
+    </div>
+</section>
+
+<section id="clasico">
+    <h2>El Clásico: Duelul Secolului</h2>
+    <div class="text-dezvoltat">
+        <p>Rivalitatea dintre Real Madrid și FC Barcelona este cea mai mare din lumea sportului. Nu este doar un meci de fotbal, ci o bătălie a identităților. De-a lungul istoriei, cele două echipe s-au întâlnit în peste 250 de meciuri oficiale.</p>
+        <p>Real Madrid deține recordul pentru cele mai multe victorii în confruntările directe și faimoasa victorie de 11-1 din 1943. Duelurile dintre Cristiano Ronaldo și Lionel Messi au ridicat acest eveniment la audiențe de peste 600 de milioane de telespectatori.</p>
+        <img src="https://phantom-marca.unidadeditorial.es" alt="El Clasico" class="clasico-img">
+    </div>
+</section>
+
+<footer>
+    <h3>Atestat Informatica 2026</h3>
+    <p>Munteanu Stefan - Clasa a 12-a C</p>
+    <p>Hala Madrid y Nada Más!</p>
+</footer>
+
+<script>
+    function openUCL(an, scor, marcatori, stadion) {
+        document.getElementById('ucl-info').style.display = 'block';
+        document.getElementById('ucl-titlu').innerText = "Finala din anul " + an;
+        document.getElementById('ucl-scor').innerText = scor;
+        document.getElementById('ucl-marcatori').innerText = marcatori;
+        document.getElementById('ucl-stadion').innerText = stadion;
+        
+        // Scroll lin catre info
+        window.location.hash = 'ucl-info';
+    }
+</script>
+
+</body>
+</html>
